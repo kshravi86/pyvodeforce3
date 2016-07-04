@@ -1,20 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
-id="com.rjfun.admobdemo" 
-version="1.0.20141225" 
+ id = "com.ingalb.albania-2016"
+    versionCode = "8"
+    version = "1.4"
 xmlns="http://www.w3.org/ns/widgets"
 xmlns:gap="http://phonegap.com/ns/1.0"
 >
-    <name>JumpRope</name>
+    <name>TEST admob</name>
     
-    <description>DemoApp for AdMob</description>
-    <author email="rjfun.mobile@gmail.com" href="http://rjfun.github.io/">RjFun</author>
+    <description>TestApp for AdMob</description>
+    <author email="ingalbi@gmail.com" href="http://ingalb.info/">ingalb</author>
     <content src="index.html" />
     <access origin="*" />
 
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.statusbar" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
     <preference name="permissions" value="none"/>
     <preference name="android-build-tool" value="gradle" /> 
     <gap:plugin name="cordova-plugin-admobpro" source="npm" />
+    <gap:plugin name="onesignal-cordova-plugin" source="npm" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="ionic-plugin-keyboard" source="npm"/>
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
