@@ -23,8 +23,8 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <preference name="android-build-tool" value="gradle" /> 
     <gap:plugin name="cordova-plugin-admobpro" source="npm" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-    <gap:plugin name="nl.x-services.plugins.socialsharing" />
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" source="npm"/>
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="ionic-plugin-keyboard" source="npm"/>
 
     <!-- Customize your app and platform with the preference element. -->
