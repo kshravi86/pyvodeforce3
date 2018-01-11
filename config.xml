@@ -13,7 +13,8 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <content src="index.html" />
     <access origin="*" />
 
-    <gap:plugin name="org.apache.cordova.device" />
+    
+		
     <gap:plugin name="org.apache.cordova.device-orientation" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="org.apache.cordova.network-information" />
