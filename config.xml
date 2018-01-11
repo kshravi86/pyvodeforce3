@@ -14,8 +14,6 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <access origin="*" />
 
     
-		
-    <gap:plugin name="org.apache.cordova.device-orientation" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.statusbar" />
