@@ -24,6 +24,7 @@ else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
 }
 
 function initApp() {
+	alert("inside init");
   if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
 
   // this will create a banner on startup
@@ -45,7 +46,9 @@ function initApp() {
 }
 
 if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-    document.addEventListener('deviceready', initApp, false);
+   alert("inside if");
+	initApp();
+	document.addEventListener('deviceready', initApp, false);
 } else {
     initApp();
 }

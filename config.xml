@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
- id = "com.ingalb.albania-2016"
+	id = "com.mycompany.myphonegapappguha"
     versionCode = "8"
     version = "1.4"
 xmlns="http://www.w3.org/ns/widgets"
