@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+""" Binary Search """
+
+
+def binarySearch(mylist, item):
+    first = 0
+    last = len(mylist)-1
+    found = False
+
+    while first&lt=last and not found:
+        midpoint = (first + last) // 2
+        if mylist[midpoint] == item:
+            found = True
+        else:
+            if item &lt mylist[midpoint]:
+                last = midpoint-1
+            else:
+                first = midpoint+1
+    return found
+
+
+if __name__ == '__main__':
+    mylist = [54,26,93,17,77,31,44,55,20]
+    print "Original: ", mylist
+    print binarySearch(mylist, 26)
+    #print binarySearch(mylist, 18)
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+#! /usr/bin/env python3
+"""Python provides usual set operator"""
+a = set(['a', 'b', 'c', 'd'])
+b = set(['c', 'd', 'e', 'f'])
+c = set(['a', 'c'])
+
+# Intersection
+print(a & b)
+
+# Subset
+print(c < a)
+
+# Difference
+print(a - b)
+
+# Symmetric Difference
+print(a ^ b)
+
+# Union
+print(a | b)
+
+"""using methods instead of operators which take any iterable as a second arg"""
+
+a = {'a', 'b', 'c', 'd'}
+b = {'c', 'd', 'e', 'f'}
+c = {'a', 'c'}
+
+print(a.intersection(["b"]))
+
+print(a.difference(["foo"]))
+
+print(a.symmetric_difference(["a", "b", "e"]))
+
+print(a.issuperset(["b", "c"]))
+
+print(a.issubset(["a", "b", "c", "d", "e", "f"]))
+
+print(a.isdisjoint(["y", 'z']))
+
+print(a.union(["foo", "bar"]))
+
+a.intersection_update(["a", "c", "z"])
+print(a)

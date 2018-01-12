@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+#! /usr/bin/env python3
+"""Context managers are useful for automatically releasing resources once you are done with them."""
+
+# common context manager that will close 
+# a file when it has been read
+with open('README.md') as f:
+    contents = f.read()
+
+
+# make your own context manager
+import contextlib
+
+@contextlib.contextmanager
+def unlock(resource):
+    resource = "unlocked"
+    try:
+        yield resource
+    finally:
+        resource = "locked"
+
+
+# a resource that is locked
+resource = "locked" 
+
+# test that it is indeed locked
+print(resource)
+
+# call your 'unlock' context manager with your resource
+with unlock(resource) as unlocked:
+    print(unlocked) # check that it is unlocked
+
+# ensure it was re-locked when it left the 'unlock' context
+print(resource)
+
+
+
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

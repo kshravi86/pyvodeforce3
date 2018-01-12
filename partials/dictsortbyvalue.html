@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+#!/usr/bin/env python3
+""" Sort a dictionary by its values with the built-in sorted() function and a 'key' argument. """
+ 
+d = {'apple': 10, 'orange': 20, 'banana': 5, 'rotten tomato': 1}
+print(sorted(d.items(), key=lambda x: x[1]))
+
+
+""" Sort using operator.itemgetter as the sort key instead of a lambda"""
+
+
+from operator import itemgetter
+
+
+print(sorted(d.items(), key=itemgetter(1)))
+
+
+"""Sort dict keys by value"""
+
+
+print(sorted(d, key=d.get))
+
+
+
+        </code></pre>
+  </body>
+</html>		

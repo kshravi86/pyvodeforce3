@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+#! /usr/bin/env python3
+"""converts list to comma separated string"""
+
+items = ['foo', 'bar', 'xyz']
+
+print (','.join(items))
+
+"""list of numbers to comma separated"""
+numbers = [2, 3, 5, 10]
+
+print (','.join(map(str, numbers)))
+
+"""list of mix  data"""
+data = [2, 'hello', 3, 3.4]
+
+print (','.join(map(str, data)))
+
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

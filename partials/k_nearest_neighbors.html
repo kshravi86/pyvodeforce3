@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+from __future__ import print_function
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+
+from mlfromscratch.utils import train_test_split, normalize, accuracy_score
+from mlfromscratch.utils import euclidean_distance, Plot
+from mlfromscratch.supervised_learning import KNN
+
+def main():
+    data = datasets.load_iris()
+    X = normalize(data.data)
+    y = data.target
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
+
+    clf = KNN(k=5)
+    y_pred = clf.predict(X_test, X_train, y_train)
+    
+    accuracy = accuracy_score(y_test, y_pred)
+
+    print ("Accuracy:", accuracy)
+
+    # Reduce dimensions to 2d using pca and plot the results
+    Plot().plot_in_2d(X_test, y_pred, title="K Nearest Neighbors", accuracy=accuracy, legend_labels=data.target_names)
+
+
+if __name__ == "__main__":
+    main()
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		

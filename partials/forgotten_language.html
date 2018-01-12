@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+	
+
+
+T = int(input())
+
+while T>0:
+	N, K = map(int, input().split())
+	D = [str(x) for x in input().split()]
+	S = []
+	
+	for x in range(K):
+		phrase = [str(x) for x in input().split()]
+		S += phrase
+	S = set(S)	
+	
+	for x in D:
+		if x in S:
+			print("YES", end=' ')
+		else:
+			print("NO", end=' ')
+	print("\n")
+	
+	T -= 1
+	
+	
+	  </code></pre>
+  </body>
+</html>		

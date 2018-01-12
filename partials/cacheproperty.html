@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+class PropertyCache:
+    """ a decorator to cache property
+    """
+
+    def __init__(self, func):
+        self.func = func
+
+    def __get__(self, obj, cls):
+        if not obj:
+            return self
+        value = self.func(obj)
+        setattr(obj, self.func.__name__, value)
+        return value
+        
+
+class Foo:
+    def __init__(self):
+        self._property_to_be_cached = 'result'
+
+    @PropertyCache
+    def property_to_be_cached(self):
+        print('compute')
+        return self._property_to_be_cached
+    
+test = Foo()
+
+print(test.property_to_be_cached)
+print(test.property_to_be_cached)
+
+
+
+        </code></pre>
+  </body>
+</html>		

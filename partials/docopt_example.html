@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+""" docopt is a library for parsing command line arguments.
+    docopt creates beautiful command-line interfaces easily
+        Usage:
+          docopt_example.py test1
+          docopt_example.py test1 new <name>
+          docopt_example.py test1 <x> <y>
+          docopt_example.py test (set|remove) <x> <y> [--moored|--drifting]
+          docopt_example.py (-h | --help)
+          docopt_example.py --version
+
+        Options:
+          -h --help        Show this screen
+          --version        Show version
+          --myfield        My custom field
+
+     """
+
+
+from docopt import docopt
+
+
+if __name__ == '__main__':
+
+    arguments = docopt(__doc__, version='1')
+    print arguments
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		

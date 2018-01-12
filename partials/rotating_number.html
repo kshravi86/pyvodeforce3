@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+# Rotation of a number
+
+num = int(input())
+
+def rotate(num, x):
+	#numbers can't be converted to list directly
+	
+	#lst = map(int, str(num))    note, This will return a map object in python 3.(no pop fxn in map object)
+	#[int(x) for x in str(num)]      another way to convert a int into list
+
+	lst = list(str(num))
+	
+	if x >= 0:
+		for i in range(x):
+			lastNum = lst.pop(-1)
+			lst.insert(0, lastNum)
+
+	else:
+		for i in range(abs(x)):
+			firstNum = lst.pop(0)
+			lst.append(firstNum)
+
+	return ''.join(lst)
+
+print(rotate(num, 1))
+
+
+# another method
+
+#num = int(input())
+#rotate(num, x):
+#	lst = [int(x) for x in str(num)] 
+#	return [lst[-x:] + lst[:-x]
+
+#print(rotate(num, 1))
+
+
+
+</code></pre>
+  </body>
+</html>		

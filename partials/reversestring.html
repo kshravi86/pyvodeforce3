@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+#! /usr/bin/env python3
+
+"""reversing string with special case of slice step param"""
+
+a = 'abcdefghijklmnopqrstuvwxyz'
+print(a[::-1])
+
+
+"""iterating over string contents in reverse efficiently."""
+
+for char in reversed(a):
+    print(char)
+
+"""reversing an integer through type conversion and slicing."""
+
+num = 123456789
+print(int(str(num)[::-1]))
+
+
+
+        </code></pre>
+  </body>
+</html>		

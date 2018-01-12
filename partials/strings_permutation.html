@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">String permuation</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+
+"""
+    Permutation Check - Given two strings, write a method to decide if one is
+    a permutation of the other
+"""
+
+import unittest
+
+
+class PermuteTest(unittest.TestCase):
+    def test_permute_pass(self, input_a='abcdefgh', input_b='ghfeabcd'):
+        result = permute(input_a, input_b)
+        self.assertEqual(result, True)
+
+    def test_permute_fail(self, input_a='abcdefgh', input_b='xhfeabcd'):
+        result = permute(input_a, input_b)
+        self.assertEqual(result, False)
+
+
+def permute(input_a, input_b):
+    list_a = list(input_a)
+    list_b = list(input_b)
+
+    list_a.sort()
+    list_b.sort()
+
+    if list_a == list_b:
+        return True
+    else:
+        return False
+
+
+if __name__ == '__main__':
+
+    unittest.main()
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		
+    

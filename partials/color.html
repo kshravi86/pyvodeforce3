@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+tests = int(input("enter the no. of test cases: "))
+
+while tests>0:
+	color_string = input("enter the color sequence using a and b only : ")
+	A = color_string.count('a')
+	B = color_string.count('b')
+	if A>B:
+		for x in ['b']:             			# if x is equal to b
+			color_string = color_string.replace('b', 'a')
+			count = B
+			print(count, color_string)
+	else:
+		for x in ['a']:
+			color_string = color_string.replace('a', 'b')
+			count = A
+			print(count, color_string)
+	tests -= 1
+	
+	</code></pre>
+  </body>
+</html>		
+	

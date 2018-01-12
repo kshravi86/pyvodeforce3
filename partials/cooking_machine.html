@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+T = int(input("Enter the number of tests: "))
+
+for x in range(T):
+    I, F = map(int, input().split())
+    count = 0
+    while True:
+        if I > F:
+            I //= 2
+            count += 1
+        elif I &lt F:
+            if F % I == 0:
+                I *= 2
+                count += 1
+            else:
+                I //= 2
+                count += 1
+        else:
+            print(count)
+            break
+            
+            
+ 
+    
+        </code></pre>
+  </body>
+</html>		           

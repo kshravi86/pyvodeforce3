@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+#! /usr/bin/env python3
+"""Sort a list and store previous indices of values"""
+
+# enumerate is a great but little-known tool for writing nice code
+
+l = [4, 2, 3, 5, 1]
+print("original list: ", l)
+
+values, indices = zip(*sorted((a, b) for (b, a) in enumerate(l)))
+
+# now values contains the sorted list and indices contains
+# the indices of the corresponding value in the original list
+
+print("sorted list: ", values)
+print("original indices: ", indices)
+
+# note that this returns tuples, but if necessary they can
+# be converted to lists using list()
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

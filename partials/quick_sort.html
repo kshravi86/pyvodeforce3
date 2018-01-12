@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+""" Quick Sort """
+
+
+def quickSort(mylist):
+    quickSortHelper(mylist, 0, len(mylist)-1)
+
+def quickSortHelper(mylist, first, last):
+    if first &lt last:
+        splitpoint = partition(mylist, first, last)
+
+        quickSortHelper(mylist, first, splitpoint-1)
+        quickSortHelper(mylist, splitpoint+1, last)
+
+def partition(mylist, first, last):
+    pivotvalue = mylist[first]
+
+    leftmark = first+1
+    rightmark = last
+
+    done = False
+    while not done:
+
+        while leftmark &lt= rightmark and mylist[leftmark] &lt= pivotvalue:
+            leftmark += 1
+
+        while mylist[rightmark] &gt= pivotvalue and rightmark >= leftmark:
+            rightmark -= 1
+
+        if rightmark &lt leftmark:
+            done = True
+        else:
+            # swap
+            mylist[leftmark], mylist[rightmark] = mylist[rightmark], mylist[leftmark]
+
+    # swap
+    mylist[leftmark], mylist[rightmark] = mylist[rightmark], mylist[leftmark]
+
+
+
+
+if __name__ == '__main__':
+    mylist = [54,26,93,17,77,31,44,55,20]
+    print "Original: ", mylist
+    quickSort(mylist)
+    print "Quick Sorted: ", mylist
+    
+    
+        </code></pre>
+  </body>
+</html>		
+    

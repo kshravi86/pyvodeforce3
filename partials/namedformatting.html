@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+#! /usr/bin/env python3
+"""easy string formatting using dicts"""
+
+d = {'name': 'Jeff', 'age': 24}
+print("My name is %(name)s and I'm %(age)i years old." % d)
+
+"""for .format, use this method"""
+
+d = {'name': 'Jeff', 'age': 24}
+print("My name is {name} and I'm {age} years old.".format(**d))
+
+"""alternate .format method"""
+print("My name is {} and I'm {} years old.".format('Jeff','24'))
+
+"""dict string formatting"""
+c = {'email': 'jeff@usr.com', 'phone': '919-123-4567'}
+print('My name is {0[name]}, my email is {1[email]} and my phone number is {1[phone]}'.format(d, c))
+
+"""object string formatting"""
+class Person:
+  pass
+me = Person()
+me.name = 'Jeff'
+me.email = 'jeff@usr.com'
+me.phone = '919-123-4567'
+print('My name is {me.name}, my email is {me.email} and my phone number is {me.phone}'.format(me=me))
+
+
+
+        </code></pre>
+  </body>
+</html>		
