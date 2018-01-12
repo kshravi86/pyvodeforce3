@@ -63,7 +63,7 @@
 	alert("inside android");
 		admobid = {
 			banner: 'ca-app-pub-7925487268042880/5455385567',
-		interstitial: 'ca-app-pub-7925487268042880/6932118769'
+		interstitial: 'ca-app-pub-5830283354936773/6256724737'
 		};
     } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
 		admobid = {
@@ -122,11 +122,13 @@
     
     // click button to call following functions
     function getSelectedAdSize() {
+	alert("inside select ad size");
         var i = document.getElementById("adSize").selectedIndex;
         var items = document.getElementById("adSize").options;
         return items[i].value;
     }
     function getSelectedPosition() {
+	alert("inside select position");
         var i = document.getElementById("adPosition").selectedIndex;
         var items = document.getElementById("adPosition").options;
         return parseInt( items[i].value );
