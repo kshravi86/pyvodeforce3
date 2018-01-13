@@ -21,7 +21,10 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <preference name="android-build-tool" value="gradle" /> 
     <gap:plugin name="cordova-plugin-admobpro" source="npm" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-		
+	<gap:plugin name="cordova-admob" source="npm" />
+
+	
+	
 		
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="ionic-plugin-keyboard" source="npm"/>
