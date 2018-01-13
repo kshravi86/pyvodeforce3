@@ -67,7 +67,7 @@ myApp.directive('ngPrism', [function() {
         }
     }
 }]);
-
+/*
 myApp.config(['admobSvcProvider', function (admobSvcProvider) {
   // Optionally you can configure the options here:
   admobSvcProvider.setOptions({
@@ -90,4 +90,4 @@ myApp.run(['admobSvc', function (admobSvc) {
 	  alert('++');
     console.log('adOpened: type of ad:' + e.adType);
   });
-}]);
+}]);*/
