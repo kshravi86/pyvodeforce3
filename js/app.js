@@ -75,7 +75,7 @@ myApp.config(['admobSvcProvider', function (admobSvcProvider) {
   // Optionally you can configure the options here:
   admobSvcProvider.setOptions({
     publisherId:          "ca-app-pub-5830283354936773/1537970274",  // Required
-   // interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
+    interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
   });
 }]);
 
