@@ -7,7 +7,7 @@ function jsonp_callback(data) {
 
 
 // Declare app level module which depends on filters, and services
-var myApp = angular.module('myApp', ['myApp.filters','admobModule', 'myApp.services', 'myApp.directives','ajoslin.mobile-navigate','ngMobile'])
+var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives','ajoslin.mobile-navigate','ngMobile'])
     .config(function ($compileProvider){
         $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
     })
@@ -66,31 +66,5 @@ myApp.directive('ngPrism', [function() {
             });
         }
     }
-}]);
-
-
-
-
-myApp.config(['admobSvcProvider', function (admobSvcProvider) {
-  // Optionally you can configure the options here:
-  admobSvcProvider.setOptions({
-    publisherId:          "ca-app-pub-5830283354936773/1537970274",  // Required
-    interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
-  });
-}]);
-
-
-myApp.run(['admobSvc', function (admobSvc) {
-  // Also you could configure the options here (or in any controller):
-  // admobSvcProvider.setOptions({ ... });
-
-  admobSvc.createBannerView();
-  // You could also call admobSvc.createBannerView(options);
-
-
-  // Handle events:
-  $rootScope.$on(admobSvc.events.onAdOpened, function onAdOpened(evt, e) {
-    console.log('adOpened: type of ad:' + e.adType);
-  });
 }]);
 
