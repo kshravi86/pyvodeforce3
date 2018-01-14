@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+	
+
+
+
+
+
+#-*-coding:utf-8 -*-
+class Node(object):
+    def __init__(self,data,next = None):
+        self.data = data
+        self.next = next
+
+class linklist(object):
+    
+    def __init__(self):
+        self.head = 0
+
+    
+    def Initiallist(self,data):
+        if len(data) == 1:
+            self.head = Node(data[0])
+        else:
+            self.head = Node(data[0])
+            p = self.head
+            for i in data[1:]:
+                p.next = Node(i)
+                p = p.next
+        return
+
+    
+    def IsEmptylist(self):
+        return self.head == 0
+
+    
+    def Printlist(self):
+        if self.IsEmptylist():
+            print "Linklist Is Empty!"
+        else:
+            p = self.head
+            while p!= None:
+                print p.data
+                p = p.next
+
+    
+    def Lengthlist(self):
+        length = 0
+        p = self.head
+        while p!= None:
+            p = p.next
+            length = length + 1
+        return length
+
+    
+    def Clearlist(self):
+        self.head = 0
+
+    
+    def Insertlist(self,data,Index):
+        if Index < 0 or Index > self.Lengthlist():
+            print "The Index Is Wrong!"
+        
+        elif Index == 0:
+            newnode = Node(data)
+            p = self.head
+            newnode.next = p
+            self.head = newnode
+        
+        elif Index == self.Lengthlist():
+            p = self.head
+            newnode = Node(data)
+            i = 1
+            while i < Index:
+                p = p.next
+                i = i + 1
+            p.next = newnode
+        
+        else:
+            i = 1
+            p = self.head
+            newnode = Node(data)
+            while i < Index:
+                p = p.next
+                i = i + 1
+            newnode.next = p.next
+            p.next = newnode
+
+    
+    def Deletelist(self,Index):
+        if Index < 0 or Index > self.Lengthlist()-1:
+            print "The Index Is Wrong!"
+        
+        if Index == 0:
+            p = self.head
+            self.head = p.next
+
+        
+        elif Index == self.Lengthlist()-1:
+            i = 1
+            p = self.head
+            while i < Index:
+                p = p.next
+                i = i + 1
+            p.next = None
+
+        
+        else:
+            i = 1
+            p = self.head
+            while i < Index:
+                p = p.next
+                i = i + 1
+            p.next = p.next.next
+
+    
+    def GetElemlist(self,Index):
+        if Index == 0:
+            p = self.head
+        else:
+            p = self.head
+            i = 0
+            while i < Index:
+                p = p.next
+                i = i + 1
+        return p.data
+
+if __name__ == '__main__':
+    Linklist = linklist()
+    Linklist.Initiallist([1,2,3,4,5,67,8])
+    
+    Linklist.Insertlist(5,7)
+    
+    Linklist.Printlist()
+    
+    Linklist.Deletelist(6)
+    
+    Linklist.Printlist()
+    
+    Linklist.Clearlist()
+    
+    Linklist.Printlist()
+
+
+
+
+        </code></pre>
+  </body>
+</html>		
