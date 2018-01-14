@@ -1,27 +1,17 @@
-// Ionic Starter App
+'use strict';
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-var starter=angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngMobile','ajoslin.mobile-navigate'])
+function jsonp_callback(data) {
+    // returning from async callbacks is (generally) meaningless
+    console.log(data.found);
+}
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleLightContent();
-    }
-  });
-})
 
-.config(['$routeProvider', function($routeProvider) {
+// Declare app level module which depends on filters, and services
+var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives','ajoslin.mobile-navigate','ngMobile'])
+    .config(function ($compileProvider){
+        $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+    })
+    .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {templateUrl: 'partials/homeView.html', controller: 'HomeCtrl'});
         $routeProvider.when('/view1', {templateUrl: 'partials/10_Functions.html'});
         $routeProvider.when('/view2', {templateUrl: 'partials/15_Errors.html'});
@@ -67,12 +57,7 @@ var starter=angular.module('starter', ['ionic', 'starter.controllers', 'starter.
   
   
   
-
-});
-
-
-
-starter.directive('ngPrism', [function() {
+myApp.directive('ngPrism', [function() {
     return {
         restrict: 'A',
         link: function($scope, element, attrs) {
