@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var starter=angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngMobile','ajoslin.mobile-navigate'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,63 +21,65 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
-  $stateProvider
-
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: "/tab",
-    abstract: true,
-    templateUrl: "templates/tabs.html"
-  })
-
-  // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  });
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+.config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/', {templateUrl: 'partials/homeView.html', controller: 'HomeCtrl'});
+        $routeProvider.when('/view1', {templateUrl: 'partials/10_Functions.html'});
+        $routeProvider.when('/view2', {templateUrl: 'partials/15_Errors.html'});
+        $routeProvider.when('/view3', {templateUrl: 'partials/16_Comprehensions.html'});
+        $routeProvider.when('/view4', {templateUrl: 'partials/14_Libraries.html'});
+        $routeProvider.when('/view5', {templateUrl: 'partials/13_Files.html'});
+        $routeProvider.when('/view6', {templateUrl: 'partials/17_Beautiful-Code.html'});
+        $routeProvider.when('/view7', {templateUrl: 'partials/07_Lists.html'});
+        $routeProvider.when('/view8', {templateUrl: 'partials/12_Dictionaries.html'});
+		$routeProvider.when('/view9',{templateUrl:'partials/08_Loops.html'});
+       $routeProvider.when('/view10',{templateUrl:'partials/05_Strings.html'});
+	   $routeProvider.when("/view11",{templateUrl:'partials/09_Conditionals.html'});
+	   $routeProvider.when("/view12",{templateUrl:'partials/06_Built-ins.html'});
+	   $routeProvider.when("/view13",{templateUrl:'partials/11_Scope.html'});
+	   $routeProvider.when("/view14",{templateUrl:'partials/04_Types_Conversion.html'});
+	   $routeProvider.when("/view15",{templateUrl:'partials/03_Variables_Assignment.html'});
+	   $routeProvider.when("/view16",{templateUrl:'partials/removeduplicatefromlist.html'});
+	   $routeProvider.when("/view17",{templateUrl:'partials/reversestring.html'});
+	   $routeProvider.when("/view18",{templateUrl:'partials/setoperators.html'});
+	   $routeProvider.when("/view19",{templateUrl:'partials/minmaxindex.html'});
+	  $routeProvider.when("/view20",{templateUrl:'partials/socketmsghandling.html'});
+	  $routeProvider.when("/view21",{templateUrl:'partials/k_means.html'});
+	  $routeProvider.when("/view22",{templateUrl:'partials/transpose.html'});
+	  $routeProvider.when("/view23",{templateUrl:'partials/valueswapping.html'});
+		$routeProvider.when("/view24",{templateUrl:'partials/listtocommaseparated.html'});
+	 $routeProvider.when("/view25",{templateUrl:'partials/conditionalassignment.html'});
+		$routeProvider.when("/view26",{templateUrl:'partials/exec.html'});
+		$routeProvider.when("/view27",{templateUrl:'partials/tryelse.html'});
+		$routeProvider.when("/view28",{templateUrl:'partials/metatable.html'});
+		$routeProvider.when("/view29",{templateUrl:'partials/rawinputintegers.html'});
+		$routeProvider.when("/view30",{templateUrl:'partials/reverselist.html'});
+		$routeProvider.when("/view33",{templateUrl:'partials/stepslice.html'});
+		$routeProvider.when("/view34",{templateUrl:'partials/setglobalvariables.html'});
+		$routeProvider.when("/view35",{templateUrl:'partials/common_seq_method.html'});
+		$routeProvider.when("/view36",{templateUrl:'partials/contextmanagers.html'});
+	    $routeProvider.when("/view37",{templateUrl:'partials/sortlistkeepindices.html'});
+		$routeProvider.when("/view38",{templateUrl:'partials/unique_by_attr.html'});
+		$routeProvider.when("/view39",{templateUrl:'partials/dictionaryget.html'});
+		$routeProvider.when("/view40",{templateUrl:'partials/lightweightswitch.html'});
+		$routeProvider.when("/view41",{templateUrl:'partials/linear_discriminant_analysis.html'});
+		$routeProvider.otherwise({redirectTo: '/'});
+  }]);
+  
+  
+  
 
 });
+
+
+
+starter.directive('ngPrism', [function() {
+    return {
+        restrict: 'A',
+        link: function($scope, element, attrs) {
+            element.ready(function() {
+                Prism.highlightElement(element[0]);
+            });
+        }
+    }
+}]);
+
