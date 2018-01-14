@@ -1,168 +1,43 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org" lang="en" ng-app="myApp">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
 
-        <!-- Use the .min version of bootstrap files in production -->
-        <!-- Use the following if you want to use responsive design -->
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="css/mobile-nav.css" />
-        <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-dark.css">
-        <link rel="stylesheet" type="text/css" href="css/prism.css">
-     
-		  
-		  
-		  <title>Angular PhoneGap Sample</title>
-    </head>
-    
-  <body onload="onLoad()" onresize="onResize()" >
-        <!-- The following tag is in place of ng-view to use the angular mobile view navigation framework
-            https://github.com/ajoslin/angular-mobile-nav
-        -->
-        <mobile-view/>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
 
-        <!-- Comment out the following 2 lines to test on the browser-->
-        <script type="text/javascript" src="cordova-2.7.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-           <script type="text/javascript" src="js/prism.js"></script>
-        
-     
-        <!-- In production use min versions -->
-        <script src="lib/jx.min.js"></script>
-        <script src="lib/angular.js"></script>
-        <script src="lib/angular-mobile.js"></script>
-        <script src="lib/mobile-nav.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-        <script src="js/app.js"></script>
-        <script src="js/services.js"></script>
-        <script src="js/controllers.js"></script>
-        <script src="js/filters.js"></script>
-        <script src="js/directives.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
 
-        <script type="text/javascript">
-		  alert("inside script of index");
-            app.initialize();
-        </script>
-		
-<script>
-    function onLoad() {
-	alert("onload");
-        if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-		alert("inside if");
-            document.addEventListener('deviceready', initApp, false);
-        } else {
-            initApp();
-        }
-    }
-
-    var admobid = {};
-    if( /(android)/i.test(navigator.userAgent) ) {
-	alert("inside android");
-		admobid = {
-			banner: 'ca-app-pub-7925487268042880/5455385567',
-		interstitial: 'ca-app-pub-7925487268042880/6932118769'
-		};
-    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
-		admobid = {
-			banner: 'ca-app-pub-7925487268042880/5455385567',
-			interstitial: 'ca-app-pub-7925487268042880/6932118769'
-		};
-    } else {
-		admobid = {
-			banner: 'ca-app-pub-7925487268042880/5455385567',
-			interstitial: 'ca-app-pub-7925487268042880/6932118769'
-		};
-    }
-        
-    function initApp() {
-	alert("inside initapp");
-	if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
-	initAd();
-        // display a banner at startup
-        createSelectedBanner();
-    }
-    function initAd(){
-	alert("inside initad");
-        var defaultOptions = {
-            // bannerId: admobid.banner,
-            // interstitialId: admobid.interstitial,
-            // adSize: 'SMART_BANNER',
-            // width: integer, // valid when set adSize 'CUSTOM'
-            // height: integer, // valid when set adSize 'CUSTOM'
-            position: AdMob.AD_POSITION.BOTTOM_CENTER,
-            // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
-            bgColor: 'black', // color name, or '#RRGGBB'
-            // x: integer,		// valid when set position to 0 / POS_XY
-            // y: integer,		// valid when set position to 0 / POS_XY
-            isTesting: false, // set to true, to receiving test ad for testing purpose
-            // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
-        };
-        AdMob.setOptions( defaultOptions );
-        registerAdEvents();
-    }
-    // optional, in case respond to events or handle error
-    function registerAdEvents() {
-	alert("inside register ad");
-        // new events, with variable to differentiate: adNetwork, adType, adEvent
-        document.addEventListener('onAdFailLoad', function(data){ 
-        	alert('error: ' + data.error + 
-        			', reason: ' + data.reason + 
-        			', adNetwork:' + data.adNetwork + 
-        			', adType:' + data.adType + 
-        			', adEvent:' + data.adEvent); // adType: 'banner' or 'interstitial'
-        });
-        document.addEventListener('onAdLoaded', function(data){});
-        document.addEventListener('onAdPresent', function(data){});
-        document.addEventListener('onAdLeaveApp', function(data){});
-        document.addEventListener('onAdDismiss', function(data){});
-    }
-    
-    // click button to call following functions
-    function getSelectedAdSize() {
-        var i = document.getElementById("adSize").selectedIndex;
-        var items = document.getElementById("adSize").options;
-        return items[i].value;
-    }
-    function getSelectedPosition() {
-        var i = document.getElementById("adPosition").selectedIndex;
-        var items = document.getElementById("adPosition").options;
-        return parseInt( items[i].value );
-    }
-    function createSelectedBanner() {
-    	var overlap = document.getElementById('overlap').checked;
-        var offsetTopBar = document.getElementById('offsetTopBar').checked;
-        AdMob.createBanner( {adId:admobid.banner, overlap:overlap, offsetTopBar:offsetTopBar, adSize: getSelectedAdSize(), position:getSelectedPosition()} );
-    }
-    function createBannerOfGivenSize() {
-        var w = document.getElementById('w').value;
-        var h = document.getElementById('h').value;
-        
-        AdMob.createBanner( {adId:admobid.banner,
-                           adSize:'CUSTOM', width:w, height:h,
-                           position:getSelectedPosition()} );
-    }
-    function showBannerAtSelectedPosition() {
-        AdMob.showBanner( getSelectedPosition() );
-    }
-    function showBannerAtGivenXY() {
-        var x = document.getElementById('x').value;
-        var y = document.getElementById('y').value;
-        AdMob.showBannerAtXY(x, y);
-    }
-    function prepareInterstitial() {
-        var autoshow = document.getElementById('autoshow').checked;
-        AdMob.prepareInterstitial({adId:admobid.interstitial, autoShow:autoshow});
-    }
-    function onResize(){
-        var s = document.getElementById('sizeinfo');
-        s.innerHTML = "web view: " + window.innerWidth + " x " + window.innerHeight;
-    }
-</script>
-		
-		
-		
-    </body>
+    <script src="js/admob.js"></script>
+      
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
 </html>
