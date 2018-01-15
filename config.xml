@@ -3,7 +3,7 @@
 	id = "com.mycompany.myphonegapapp882"
     versionCode = "12"
     version = "2.4"
-	android-versionCode="103021" 
+	android-versionCode="103020" 
 xmlns="http://www.w3.org/ns/widgets"
 xmlns:gap="http://phonegap.com/ns/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@ xmlns:gap="http://phonegap.com/ns/1.0"
 		android:anyDensity="true"
 		/>
 	</edit-config>
-    <name>Python DataStructures</name>
+    <name>Cool Python</name>
     
     <description>TestApp for AdMob</description>
     <author email="ingalbi@gmail.com" href="http://ingalb.info/">ingalb</author>
