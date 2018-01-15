@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
 	id = "com.mycompany.myphonegapapp882"
-    versionCode = "11"
+    versionCode = "12"
     version = "2.4"
-	android-versionCode="103020" 
+	android-versionCode="103021" 
 xmlns="http://www.w3.org/ns/widgets"
 xmlns:gap="http://phonegap.com/ns/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
