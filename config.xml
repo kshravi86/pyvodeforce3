@@ -3,7 +3,7 @@
 	id = "com.mycompany.myphonegapapp756"
     versionCode = "12"
     version = "2.4"
-	
+	android-versionCode="103020" 
 xmlns="http://www.w3.org/ns/widgets"
 xmlns:gap="http://phonegap.com/ns/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,8 +32,9 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <gap:plugin name="cordova-plugin-admobpro" source="npm" />
     
 		
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <gap:plugin name="ionic-plugin-keyboard" source="npm"/>
+   <!-- <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    -->
+		<gap:plugin name="ionic-plugin-keyboard" source="npm"/>
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
