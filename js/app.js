@@ -16,7 +16,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
         $routeProvider.when('/view1', {templateUrl: 'partials/Untitled1.html'});
         $routeProvider.when('/view2', {templateUrl: 'partials/Untitled2.html'});
         $routeProvider.when('/view3', {templateUrl: 'partials/Untitled3.html'});
-        $routeProvider.when('/view4', {templateUrl: 'partials/basic_operations.html'});
+        $routeProvider.when('/view4', {templateUrl: 'partials/Untitled4.html'});
         $routeProvider.when('/view5', {templateUrl: 'partials/logistic_regression.html'});
         $routeProvider.when('/view6', {templateUrl: 'partials/BasicTensorFlow.html'});
         $routeProvider.when('/view7', {templateUrl: 'partials/ML for Beginners.html'});
