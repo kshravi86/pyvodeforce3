@@ -19,7 +19,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
         $routeProvider.when('/view4', {templateUrl: 'partials/Untitled4.html'});
         $routeProvider.when('/view5', {templateUrl: 'partials/Untitled5.html'});
         $routeProvider.when('/view6', {templateUrl: 'partials/Untitled6.html'});
-        $routeProvider.when('/view7', {templateUrl: 'partials/ML for Beginners.html'});
+        $routeProvider.when('/view7', {templateUrl: 'partials/Untitled7.html'});
         $routeProvider.when('/view8', {templateUrl: 'partials/for.html'});
 		$routeProvider.when('/view9',{templateUrl:'partials/0-welcome.html'});
        $routeProvider.when('/view10',{templateUrl:'partials/linear_svm.html'});
