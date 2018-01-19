@@ -24,7 +24,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
 		
        $routeProvider.when('/view10',{templateUrl:'partials/Untitled7.html'});
 	   $routeProvider.when("/view11",{templateUrl:'partials/Untitled11.html'});
-	   $routeProvider.when("/view12",{templateUrl:'partials/variables.html'});
+	   $routeProvider.when("/view12",{templateUrl:'partials/Untitled12.html'});
 	   $routeProvider.when("/view13",{templateUrl:'partials/neural_network.html'});
 	   $routeProvider.when("/view14",{templateUrl:'partials/gradient_boosting_classifier.html'});
 	   $routeProvider.when("/view15",{templateUrl:'partials/bayesian_regression.html'});
