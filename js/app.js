@@ -30,7 +30,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
 	   $routeProvider.when("/view15",{templateUrl:'partials/Untitled18.html'});
 	   $routeProvider.when("/view16",{templateUrl:'partials/Untitled19.html'});
 	   $routeProvider.when("/view17",{templateUrl:'partials/Untitled20.html'});
-	   $routeProvider.when("/view18",{templateUrl:'partials/convolutional_neural_network.html'});
+	   $routeProvider.when("/view18",{templateUrl:'partials/Untitled21.html'});
 	   $routeProvider.when("/view19",{templateUrl:'partials/dbscan.html'});
 	  $routeProvider.when("/view20",{templateUrl:'partials/gaussian_mixture_model.html'});
 	  $routeProvider.when("/view21",{templateUrl:'partials/k_means.html'});
