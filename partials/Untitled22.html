@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>16_Comprehensions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Untitled6</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="List-Comprehension">List Comprehension<a class="anchor-link" href="#List-Comprehension">&#182;</a></h1>
+<h1 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Take-Example-of-add-3-to-every-element-in-the-list">Take Example of add 3 to every element in the list<a class="anchor-link" href="#Take-Example-of-add-3-to-every-element-in-the-list">&#182;</a></h1>
+<h1 id="String-Slicing">String Slicing<a class="anchor-link" href="#String-Slicing">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11792,12 +11792,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">54</span><span class="p">]</span>
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">every</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
-    <span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">every</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="s2">&quot;aakash&quot;</span>
+<span class="n">c</span><span class="o">=</span><span class="s2">&quot;ravi&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -11814,7 +11812,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[21, 30, 39, 57]
+<pre>aak
+i
 </pre>
 </div>
 </div>
@@ -11827,7 +11826,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="--But-Python-has-easy-way-of-doing-the-same">- But Python has easy way of doing the same<a class="anchor-link" href="#--But-Python-has-easy-way-of-doing-the-same">&#182;</a></h1>
+<h1 id="find-function">find function<a class="anchor-link" href="#find-function">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="function-returns-the-index-value-of-input.If-it-is-not-found-it-returns--1.">function returns the index value of input.If it is not found it returns -1.<a class="anchor-link" href="#function-returns-the-index-value-of-input.If-it-is-not-found-it-returns--1.">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11836,9 +11843,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list3</span> <span class="o">=</span> <span class="p">[(</span><span class="n">m</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;sh&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;sh&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11855,7 +11861,39 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[21, 30, 39, 57]
+<pre>4
+-1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a
 </pre>
 </div>
 </div>
@@ -11868,15 +11906,85 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="You-can-also-put-conditional-logic-in-list-comprehension">You can also put conditional logic in list comprehension<a class="anchor-link" href="#You-can-also-put-conditional-logic-in-list-comprehension">&#182;</a></h1>
+<h1 id="One-can-also-input-find(-)-function-between-which-index-values-it-has-to-search.">One can also input find( ) function between which index values it has to search.<a class="anchor-link" href="#One-can-also-input-find(-)-function-between-which-index-values-it-has-to-search.">&#182;</a></h1>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Regular-way-of-doing-it">Regular way of doing it<a class="anchor-link" href="#Regular-way-of-doing-it">&#182;</a></h1>
+<h1 id="capitalize(-)-is-used-to-capitalize-the-first-element-in-the-string.">capitalize( ) is used to capitalize the first element in the string.<a class="anchor-link" href="#capitalize(-)-is-used-to-capitalize-the-first-element-in-the-string.">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Aakash
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="endswith(-)-function-is-used-to-check-if-the-given-string-ends-with-the-particular-char-which-is-given-as-input.">endswith( ) function is used to check if the given string ends with the particular char which is given as input.<a class="anchor-link" href="#endswith(-)-function-is-used-to-check-if-the-given-string-ends-with-the-particular-char-which-is-given-as-input.">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11885,13 +11993,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">54</span><span class="p">]</span>
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">every</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">every</span><span class="o">&gt;</span><span class="mi">18</span><span class="p">:</span>
-      <span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">every</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11908,7 +12010,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[30, 39, 57]
+<pre>False
 </pre>
 </div>
 </div>
@@ -11921,18 +12023,16 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Comprehension-way-of-doing-the-same">Comprehension way of doing the same<a class="anchor-link" href="#Comprehension-way-of-doing-the-same">&#182;</a></h1>
+<h1 id="count(-)-function-counts-the-number-of-char-in-the-given-string.">count( ) function counts the number of char in the given string.<a class="anchor-link" href="#count(-)-function-counts-the-number-of-char-in-the-given-string.">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list4</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span> <span class="o">+</span><span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">list4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11949,7 +12049,85 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[30, 39, 57]
+<pre>3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lower(-)-converts-any-capital-letter-to-small-letter">lower( ) converts any capital letter to small letter<a class="anchor-link" href="#lower(-)-converts-any-capital-letter-to-small-letter">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>aakash
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="upper(-)-converts-any-small-letter-to-capital-letter.">upper( ) converts any small letter to capital letter.<a class="anchor-link" href="#upper(-)-converts-any-small-letter-to-capital-letter.">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>AAKASH
 </pre>
 </div>
 </div>

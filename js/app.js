@@ -32,8 +32,8 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
 	   $routeProvider.when("/view17",{templateUrl:'partials/Untitled20.html'});
 	   $routeProvider.when("/view18",{templateUrl:'partials/Untitled21.html'});
 	   
-	   $routeProvider.when("/view19",{templateUrl:'partials/Untitled22.html'});
-	  $routeProvider.when("/view20",{templateUrl:'partials/gaussian_mixture_model.html'});
+	   
+	  $routeProvider.when("/view20",{templateUrl:'partials/Untitled22.html'});
 	  $routeProvider.when("/view21",{templateUrl:'partials/k_means.html'});
 	  $routeProvider.when("/view22",{templateUrl:'partials/perceptron.html'});
 	  $routeProvider.when("/view23",{templateUrl:'partials/decision_tree_classifier.html'});
