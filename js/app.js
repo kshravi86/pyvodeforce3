@@ -34,7 +34,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
 	   
 	   
 	  $routeProvider.when("/view20",{templateUrl:'partials/Untitled22.html'});
-	  $routeProvider.when("/view21",{templateUrl:'partials/k_means.html'});
+	  $routeProvider.when("/view21",{templateUrl:'partials/Untitled23.html'});
 	  $routeProvider.when("/view22",{templateUrl:'partials/perceptron.html'});
 	  $routeProvider.when("/view23",{templateUrl:'partials/decision_tree_classifier.html'});
 		$routeProvider.when("/view24",{templateUrl:'partials/principal_component_analysis.html'});
