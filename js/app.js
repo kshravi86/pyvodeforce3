@@ -14,7 +14,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {templateUrl: 'partials/homeView.html', controller: 'HomeCtrl'});
         $routeProvider.when('/view1', {templateUrl: 'partials/dfdict.html'});
-        $routeProvider.when('/view2', {templateUrl: 'partials/Untitled2.html'});
+        $routeProvider.when('/view2', {templateUrl: 'partials/rename.html'});
         $routeProvider.when('/view3', {templateUrl: 'partials/Untitled3.html'});
         $routeProvider.when('/view4', {templateUrl: 'partials/Untitled4.html'});
         $routeProvider.when('/view5', {templateUrl: 'partials/Untitled5.html'});
