@@ -18,7 +18,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
         $routeProvider.when('/view3', {templateUrl: 'partials/ReshapingData.html'});
         $routeProvider.when('/view4', {templateUrl: 'partials/LoopUnique.html'});
         $routeProvider.when('/view5', {templateUrl: 'partials/Untitled5.html'});
-        $routeProvider.when('/view6', {templateUrl: 'partials/Untitled6.html'});
+        $routeProvider.when('/view6', {templateUrl: 'partials/headcolumn.html'});
         $routeProvider.when('/view7', {templateUrl: 'partials/Untitled7.html'});
         $routeProvider.when('/view8', {templateUrl: 'partials/Pandas.html'});
 		
