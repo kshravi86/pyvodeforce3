@@ -22,7 +22,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
         $routeProvider.when('/view7', {templateUrl: 'partials/slicefilter.html'});
         $routeProvider.when('/view8', {templateUrl: 'partials/Pandas.html'});
 		
-       $routeProvider.when('/view10',{templateUrl:'partials/Untitled7.html'});
+       $routeProvider.when('/view10',{templateUrl:'partials/df.html'});
 	   $routeProvider.when("/view11",{templateUrl:'partials/Untitled11.html'});
 	   $routeProvider.when("/view12",{templateUrl:'partials/Untitled12.html'});
 	   $routeProvider.when("/view13",{templateUrl:'partials/Untitled14.html'});
