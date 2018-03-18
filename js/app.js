@@ -25,7 +25,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
        $routeProvider.when('/view10',{templateUrl:'partials/df.html'});
 	   $routeProvider.when("/view11",{templateUrl:'partials/booli.html'});
 	   $routeProvider.when("/view12",{templateUrl:'partials/select.html'});
-	   $routeProvider.when("/view13",{templateUrl:'partials/Untitled14.html'});
+	   $routeProvider.when("/view13",{templateUrl:'partials/groupby.html'});
 	   $routeProvider.when("/view14",{templateUrl:'partials/Untitled15.html'});
 	   $routeProvider.when("/view15",{templateUrl:'partials/Untitled18.html'});
 	   $routeProvider.when("/view16",{templateUrl:'partials/Untitled19.html'});
