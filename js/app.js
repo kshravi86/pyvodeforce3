@@ -13,7 +13,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
     })
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {templateUrl: 'partials/homeView.html', controller: 'HomeCtrl'});
-        $routeProvider.when('/view1', {templateUrl: 'partials/dfdict.html'});
+        $routeProvider.when('/view1', {templateUrl: 'partials/tensehello.html'});
         $routeProvider.when('/view2', {templateUrl: 'partials/rename.html'});
         $routeProvider.when('/view3', {templateUrl: 'partials/ReshapingData.html'});
         $routeProvider.when('/view4', {templateUrl: 'partials/LoopUnique.html'});
