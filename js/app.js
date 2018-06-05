@@ -16,7 +16,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
         $routeProvider.when('/view1', {templateUrl: 'partials/tensehello.html'});
         $routeProvider.when('/view2', {templateUrl: 'partials/tfsession.html'});
         $routeProvider.when('/view3', {templateUrl: 'partials/tftensor.html'});
-        $routeProvider.when('/view4', {templateUrl: 'partials/LoopUnique.html'});
+        $routeProvider.when('/view4', {templateUrl: 'partials/variables.html'});
         $routeProvider.when('/view5', {templateUrl: 'partials/Untitled5.html'});
         $routeProvider.when('/view6', {templateUrl: 'partials/headcolumn.html'});
         $routeProvider.when('/view7', {templateUrl: 'partials/slicefilter.html'});
