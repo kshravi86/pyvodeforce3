@@ -23,30 +23,31 @@
 
 
 
-
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/59/A
+Solution: Count the number of upper case letters.
+Check for length of string to be odd or even and accordingly check if the string
+of upper case or not. If so, convert the string to upper case. Else, convert to lowercase.
 '''
 
-if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
+word = raw_input()
+l = len(word)
+#check if the word has majority upper case letters or not
+count = 0
+for i in range(0,l):
+    if(word[i]>='A' and word[i]<='Z'):
+        count+=1
 
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
+#make cases for both even and odd length
+if((l%2==0 and count>(l/2)) or (l%2==1 and count>=(l/2)+1)):
+    print word.upper()
+else:
+    print word.lower()
+    
+    
+    
 
-    print n-unique_nums.__len__()
-    
-    
-    
-    
         </code></pre>
   </body>
 </html>		
+    

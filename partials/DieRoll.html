@@ -25,25 +25,37 @@
 
 
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/9/A
+Algorithm: avlbl calculates the available possible dice values. Once that is available, the irr_fraction() computes the
+irreducible fraction using the euclid algorithm based gcd computation. Results are printed as required.
 '''
 
+#euclid algorithm for gcd computation
+def gcd(a,b):
+    if(b==0):
+        return a
+    else:
+        return gcd(b,a%b)
+
+def irr_fraction(num,dem):
+    g = gcd(num,dem)
+    while(g>1):
+        num/=g
+        dem/=g
+        g = gcd(num,dem)
+
+    print str(num)+"/"+str(dem)
+
+
+def solve(y,w):
+
+    avlbl = min(6,6-max(y,w)+1)
+    irr_fraction(avlbl,6)
+
+
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
-
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
-
-    print n-unique_nums.__len__()
-    
+    y,w = map(int,raw_input().split(" "))
+    solve(y,w)
     
     
     

@@ -13,37 +13,36 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
     })
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {templateUrl: 'partials/homeView.html', controller: 'HomeCtrl'});
-        $routeProvider.when('/view1', {templateUrl: 'partials/tensehello.html'});
-        $routeProvider.when('/view2', {templateUrl: 'partials/tfsession.html'});
-        $routeProvider.when('/view3', {templateUrl: 'partials/tftensor.html'});
-        $routeProvider.when('/view4', {templateUrl: 'partials/variables.html'});
-        $routeProvider.when('/view5', {templateUrl: 'partials/add.html'});
-        $routeProvider.when('/view6', {templateUrl: 'partials/linear_regression.html'});
-        $routeProvider.when('/view7', {templateUrl: 'partials/basics_operations.html'});
-        $routeProvider.when('/view8', {templateUrl: 'partials/logistic_regression.html'});
-		
-       $routeProvider.when('/view10',{templateUrl:'partials/df.html'});
-	   $routeProvider.when("/view11",{templateUrl:'partials/booli.html'});
-	   $routeProvider.when("/view12",{templateUrl:'partials/select.html'});
-	   $routeProvider.when("/view13",{templateUrl:'partials/groupby.html'});
-	   $routeProvider.when("/view14",{templateUrl:'partials/series.html'});
-	   $routeProvider.when("/view15",{templateUrl:'partials/Untitled18.html'});
-	   $routeProvider.when("/view16",{templateUrl:'partials/Untitled19.html'});
-	   $routeProvider.when("/view17",{templateUrl:'partials/Untitled20.html'});
-	   $routeProvider.when("/view18",{templateUrl:'partials/Untitled21.html'});
-	   
-	   
-	  $routeProvider.when("/view20",{templateUrl:'partials/Untitled22.html'});
-	  $routeProvider.when("/view21",{templateUrl:'partials/Untitled23.html'});
-	  $routeProvider.when("/view22",{templateUrl:'partials/Untitled24.html'});
-	  $routeProvider.when("/view23",{templateUrl:'partials/Untitled25.html'});
-		$routeProvider.when("/view24",{templateUrl:'partials/principal_component_analysis.html'});
-	 $routeProvider.when("/view25",{templateUrl:'partials/support_vector_machine.html'});
-		$routeProvider.when("/view26",{templateUrl:'partials/random_forest3.html'});
-		$routeProvider.when("/view27",{templateUrl:'partials/k_nearest_neighbors.html'});
-		$routeProvider.when("/view28",{templateUrl:'partials/adaboost.html'});
-		$routeProvider.when("/view29",{templateUrl:'partials/recurrent_neural_network.html'});
-		$routeProvider.when("/view30",{templateUrl:'partials/particle_swarm_optimization.html'});
+        $routeProvider.when('/view1', {templateUrl: 'partials/BeautifulYear.html'});
+        $routeProvider.when('/view2', {templateUrl: 'partials/BlackSquare.html'});
+        $routeProvider.when('/view3', {templateUrl: 'partials/BoyorGirl.html'});
+        $routeProvider.when('/view4', {templateUrl: 'partials/CalculatingFunction.html'});
+        $routeProvider.when('/view5', {templateUrl: 'partials/ChatRoom.html'});
+        $routeProvider.when('/view6', {templateUrl: 'partials/CielandDancing.html'});
+        $routeProvider.when('/view7', {templateUrl: 'partials/BusinessTrip.html'});
+        $routeProvider.when('/view8', {templateUrl: 'partials/AmusingJoke.html'});
+		$routeProvider.when('/view9',{templateUrl:'partials/ChoosingTeams.html'});
+       $routeProvider.when('/view10',{templateUrl:'partials/EvenOdds.html'});
+	   $routeProvider.when("/view11",{templateUrl:'partials/DieRoll.html'});
+	   $routeProvider.when("/view12",{templateUrl:'partials/CheapTravel.html'});
+	   $routeProvider.when("/view13",{templateUrl:'partials/Drinks.html'});
+	   $routeProvider.when("/view14",{templateUrl:'partials/EpicGame.html'});
+	   $routeProvider.when("/view15",{templateUrl:'partials/Expression.html'});
+	   $routeProvider.when("/view16",{templateUrl:'partials/FancyFence.html'});
+	   $routeProvider.when("/view17",{templateUrl:'partials/CinemaLine.html'});
+	   $routeProvider.when("/view18",{templateUrl:'partials/FlippingGame.html'});
+	   $routeProvider.when("/view19",{templateUrl:'partials/FreeCash.html'});
+	  $routeProvider.when("/view20",{templateUrl:'partials/Football.html'});
+	  $routeProvider.when("/view21",{templateUrl:'partials/Game.html'});
+	  $routeProvider.when("/view22",{templateUrl:'partials/cAPSlOCK.html'});
+	  $routeProvider.when("/view23",{templateUrl:'partials/IQtest.html'});
+		$routeProvider.when("/view24",{templateUrl:'partials/StringTask.html'});
+	 $routeProvider.when("/view25",{templateUrl:'partials/k-String.html'});
+		$routeProvider.when("/view26",{templateUrl:'partials/Magnets.html'});
+		$routeProvider.when("/view27",{templateUrl:'partials/Word.html'});
+		$routeProvider.when("/view28",{templateUrl:'partials/Towers.html'});
+		$routeProvider.when("/view29",{templateUrl:'partials/Watermelon.html'});
+		$routeProvider.when("/view30",{templateUrl:'partials/CollectingBeatsisFun.html'});
 		$routeProvider.when("/view33",{templateUrl:'partials/logistic_regression1.html'});
 		$routeProvider.when("/view34",{templateUrl:'partials/demo.html'});
 		$routeProvider.when("/view35",{templateUrl:'partials/naive_bayes.html'});

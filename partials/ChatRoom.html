@@ -24,26 +24,32 @@
 
 
 
+
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/58/A
+Algorithm: Iterate over the string and maintain the index for word hello. If they match for the complete word hello,
+return YES. Else NO.
 '''
+
+def solve(str):
+    word = "hello"
+    index = 0
+    for i in range(0,len(str)):
+        if(index==5):
+            return "YES"
+        if(str[i]==word[index]):
+            index+=1
+
+    if(index<5):
+        return "NO"
+    else:
+        return "YES"
+
+
 
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
-
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
-
-    print n-unique_nums.__len__()
-    
+    str = raw_input()
+    print solve(str)
     
     
     

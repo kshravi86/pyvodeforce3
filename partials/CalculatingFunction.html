@@ -22,28 +22,25 @@
 		
 
 
-
-
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+Problem Url: http://codeforces.com/problemset/problem/486/A
+
+Algorithm: Observe the series closely. Since every number is differently signed that its neighbors, the sum
+ increases only 1 by every 2 numbers in that series. So, if n is even, the sum would be half of it. If odd, get the
+ sum till its previous number which was even, which would be half of it. Now, add the negative n to it since all
+ odd numbers are negatively signed in this series. Return the result from both if-else blocks.
 '''
+def solve(n):
+    if(n%2==0):
+        return n/2
+    else:
+        prev = (n-1)/2
+        return prev-n
+
 
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
-
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
-
-    print n-unique_nums.__len__()
-    
+    n = input()
+    print solve(n)
     
     
     

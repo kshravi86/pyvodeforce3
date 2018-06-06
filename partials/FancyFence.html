@@ -24,29 +24,39 @@
 
 
 
+
+
+
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+Problem Url: http://codeforces.com/problemset/problem/270/A
+
+Algorithm: We know that the sum of internal angles of a polygon is 180(n-2) where n is no. of sides of it.
+So if each angle is a, then the following equation holds true:
+n*a = 180(n-2). This solves out to n = 360/(180-a). Now if the RHS of that is an integer, we have a valid polygon.
 '''
+
+
+def solve(angle):
+
+    if 360 % (180 - angle) != 0:
+        return "NO"
+    else:
+        return "YES"
+
 
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
+    cases = int(input())
+    results = list()
+    for case in xrange(0,cases):
+        angle = int(input())
+        results.append(angle)
+    for result in results:
+        print solve(result)
+        
+        
+        
+        
 
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
-
-    print n-unique_nums.__len__()
-    
-    
-    
-    
         </code></pre>
   </body>
 </html>		

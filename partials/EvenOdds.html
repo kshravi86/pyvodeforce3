@@ -25,25 +25,27 @@
 
 
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/318/A
+Algorithm: Find the half of the limit number.
+Check if it lies on the left of the half of it. If so, print the kth odd number.
+Check if it lies on the right of the half of it. If so, print the kth even number.
 '''
 
+
+def solve(n,k):
+    if(n%2==0):
+        half = n/2
+    else:
+        half = n/2 + 1
+
+    if(k<=half):
+        return (2*k)-1
+    else:
+        return 2*(k-half)
+
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
-
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
-
-    print n-unique_nums.__len__()
-    
+    n,k = map(int,raw_input().split(" "))
+    print solve(n,k)
     
     
     

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+'''
+http://codeforces.com/problemset/problem/219/A
+Solution: Create a character frequency of the input character string. Iterate over it and
+check, if the current character frequency is not a multiple of k, return -1. Otherwise,
+append freq/k times of this character in result k-string. After the iteration,
+return string made of k-Strings.
+'''
+
+from collections import Counter
+
+def solve(str,k):
+    mp = Counter(str)
+    #print mp
+    kstring = ""
+    for key,val in mp.iteritems():
+        if(val%k!=0):
+            return -1
+        else:
+            #print val
+            kstring += key*(val/k)
+
+    #print result
+    result = ""
+    for i in range(0,k):
+        result += kstring
+
+    return result
+
+
+if __name__ == "__main__":
+    k = int(raw_input())
+    str = raw_input()
+
+    print solve(str,k)
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		

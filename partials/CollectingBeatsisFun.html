@@ -24,29 +24,36 @@
 
 
 
+
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/373/A
+Solution: Create a map via Counter of the panel numbers. Make capacity as 2*k.
+Run a loop for all digits and see if there is a case where the value of a digit in the
+Counter map is more than the capacity. If so, return NO. If every case is fine, return YES.
 '''
+from collections import Counter
+
+def solve(capacity,mp):
+    for i in range(1,10):
+        if(mp[str(i)] > capacity):
+            return "NO"
+
+    return "YES"
+
+
 
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
+    k = int(raw_input())
+    panels = ""
+    for i in range(0,4):
+        panels += raw_input()
 
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
+    mp = Counter(panels)
+    #k is the capacity with 1 hand, Total capacity is 2*k (both hands)
+    print solve(2*k,mp)
 
-    print n-unique_nums.__len__()
-    
-    
-    
-    
+
+
         </code></pre>
   </body>
 </html>		

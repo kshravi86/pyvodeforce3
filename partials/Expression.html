@@ -24,29 +24,36 @@
 
 
 
+
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/479/A
+Algorithm: If all the numbers are 1, return 3. If a and c are 1, then we add them all.
+If now any of a , b or c are 1, then add it with its next number and multiply with the 3rd number.
+Take max of a+b and b+c when b==1.
 '''
+
+def solve(a,b,c):
+    if(a==1 and c==1):
+        return 2+b
+    elif(a==1):
+        return (a+b)*c
+    elif(b==1):
+        return max((a+b)*c,a*(b+c))
+    elif(c==1):
+        return a*(b+c)
+    else:
+        return a*b*c
+
 
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
+    a = input()
+    b = input()
+    c = input()
+    print solve(a,b,c)
+    
+    
+    
 
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
-
-    print n-unique_nums.__len__()
-    
-    
-    
-    
         </code></pre>
   </body>
 </html>		

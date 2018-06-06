@@ -21,32 +21,24 @@
 	<pre  ng-prism  class="language-python"><code>
 		
 
-
-
-
 '''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
+http://codeforces.com/problemset/problem/271/A
+Algorithm: Brute force solution. Keep increasing the year and create a set of its digits.
+If all digits are unique, the size of the set will be 4. If such a case if found, return the
+current year value.
 '''
+def solve(year):
+    while(True):
+        year = str(int(year)+1)
+        if(len(set(year))==4):
+            return year
 
 if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
+    print solve(raw_input())
 
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
 
-    print n-unique_nums.__len__()
-    
-    
-    
-    
+
+
         </code></pre>
   </body>
 </html>		
